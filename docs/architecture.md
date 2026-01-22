@@ -12,14 +12,14 @@ The system follows a three-phase pipeline:
 Each phase is modular, auditable, and extensible for future integration into UIDAI’s operational workflows.
 ### End-to-End Predictive Analytics Architecture
 
-![End-to-End Predictive Analytics Architecture](end_to_end_architecture_uidaijpeg)
+![End-to-End Predictive Analytics Architecture](end_to_end_architecture_uidai.jpeg)
 
 *Figure 1: High-level architecture illustrating data ingestion, temporal feature engineering, and predictive modeling stages used to transform UIDAI datasets into actionable forecasts.*
 
 ---
 
 ## Phase 1: Data Ingestion & Schema Harmonization
-![Data Ingestion and Schema Harmonization Pipeline](data_ingestion_schema_harmonization.png)
+![Data Ingestion and Schema Harmonization Pipeline](data_ingestion_schema_harmonization.jpeg)
 
 *Figure 2: Raw UIDAI enrolment, demographic, and biometric datasets are standardized through schema harmonization and stored in optimized Parquet format.*
 ### Inputs
@@ -48,7 +48,7 @@ This phase ensures that downstream analytics operate on consistent, high-quality
 ## Phase 2: Temporal Aggregation & Feature Engineering
 ### Temporal Feature Engineering Architecture
 
-![Temporal Feature Engineering Architecture](temporal_feature_engineering_pipeline.png)
+![Temporal Feature Engineering Architecture](temporal_feature_engineering_pipeline.jpeg)
 
 *Figure 3: Weekly aggregation followed by lag features, rolling statistics, and velocity vectors to construct the final feature vector \(X_t\).*
 
@@ -81,7 +81,7 @@ This phase enables the model to learn temporal structure, seasonality, and non-l
 ## Phase 3: Predictive Modeling & Validation
 ### Predictive Modeling & Validation Pipeline
 
-![Predictive Modeling Pipeline](predictive_modeling_validation_pipeline.png)
+![Predictive Modeling Pipeline](predictive_modeling_validation_pipeline.jpeg)
 
 *Figure 4: Time-aware training protocol with log transformation, rolling validation, and LightGBM-based forecasting.*
 
