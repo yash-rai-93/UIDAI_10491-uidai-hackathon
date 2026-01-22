@@ -10,6 +10,11 @@ The system follows a three-phase pipeline:
 3. Predictive Modeling & Validation  
 
 Each phase is modular, auditable, and extensible for future integration into UIDAI’s operational workflows.
+### End-to-End Predictive Analytics Architecture
+
+![End-to-End Predictive Analytics Architecture](../docs//End-to-End Predictive Analytics Architecture for UIDAI.jpeg)
+
+*Figure 1: High-level architecture illustrating data ingestion, temporal feature engineering, and predictive modeling stages used to transform UIDAI datasets into actionable forecasts.*
 
 ---
 
