@@ -12,14 +12,16 @@ The system follows a three-phase pipeline:
 Each phase is modular, auditable, and extensible for future integration into UIDAI’s operational workflows.
 ### End-to-End Predictive Analytics Architecture
 
-![End-to-End Predictive Analytics Architecture](..docs/end_to_end_architecture_uidai.jpeg.jpeg)
+![End-to-End Predictive Analytics Architecture](end_to_end_architecture_uidaijpeg)
 
 *Figure 1: High-level architecture illustrating data ingestion, temporal feature engineering, and predictive modeling stages used to transform UIDAI datasets into actionable forecasts.*
 
 ---
 
 ## Phase 1: Data Ingestion & Schema Harmonization
+![Data Ingestion and Schema Harmonization Pipeline](data_ingestion_schema_harmonization.png)
 
+*Figure 2: Raw UIDAI enrolment, demographic, and biometric datasets are standardized through schema harmonization and stored in optimized Parquet format.*
 ### Inputs
 - Aadhaar Enrolment Dataset (raw schema)
 - Aadhaar Demographic Update Dataset (raw schema)
@@ -44,6 +46,11 @@ This phase ensures that downstream analytics operate on consistent, high-quality
 ---
 
 ## Phase 2: Temporal Aggregation & Feature Engineering
+### Temporal Feature Engineering Architecture
+
+![Temporal Feature Engineering Architecture](temporal_feature_engineering_pipeline.png)
+
+*Figure 3: Weekly aggregation followed by lag features, rolling statistics, and velocity vectors to construct the final feature vector \(X_t\).*
 
 ### Temporal Aggregation
 - Daily records are aggregated to **weekly granularity** (`W_t`)
@@ -72,6 +79,11 @@ This phase enables the model to learn temporal structure, seasonality, and non-l
 ---
 
 ## Phase 3: Predictive Modeling & Validation
+### Predictive Modeling & Validation Pipeline
+
+![Predictive Modeling Pipeline](predictive_modeling_validation_pipeline.png)
+
+*Figure 4: Time-aware training protocol with log transformation, rolling validation, and LightGBM-based forecasting.*
 
 ### Training Protocol
 - Log transformation (`log(1 + Y)`) applied to stabilize variance  
